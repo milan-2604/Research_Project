@@ -8,21 +8,25 @@ This project analyzes synthetic e-commerce customer data to uncover insights abo
 
 ## 🗂️ Project Structure
 
-Research_Project/
-├── generate_ecommerce_data.py # Script to generate synthetic e-commerce data
-├── ecommerce_customer_data.csv # Raw dataset generated
-├── check_csv.py # Utility to check number of rows in the CSV
-├── analyze.py # Main script: cleaning, analysis, visualization, modeling
-├── gender_distribution.png # Gender distribution plot
-├── country_distribution.png # Country distribution plot
-├── age_distribution.png # Age distribution histogram
-├── income_vs_spent.png # Annual Income vs Total Spent scatter plot
-├── cleaned_ecommerce_customer_data.csv # Cleaned dataset after preprocessing
-├── requirements.txt # Required Python dependencies
-└── README.md # Project documentation (this file)
+## 🗂️ Project Structure
 
-yaml
-Copy code
+```
+Research_Project/
+├── generate_ecommerce_data.py              # Script to generate synthetic e-commerce data
+├── ecommerce_customer_data.csv             # Raw dataset generated
+├── check_csv.py                            # Utility to check number of rows in the CSV
+├── analyze.py                              # Main script: cleaning, analysis, visualization, modeling
+├── gender_distribution.png                 # Gender distribution plot
+├── country_distribution.png                # Country distribution plot
+├── age_distribution.png                    # Age distribution histogram
+├── income_vs_spent.png                     # Annual Income vs Total Spent scatter plot
+├── cleaned_ecommerce_customer_data.csv     # Cleaned dataset after preprocessing
+├── requirements.txt                        # Required Python dependencies
+└── README.md                               # Project documentation (this file)
+```
+
+
+
 
 ---
 
