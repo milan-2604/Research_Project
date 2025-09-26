@@ -8,8 +8,6 @@ This project analyzes synthetic e-commerce customer data to uncover insights abo
 
 ## 🗂️ Project Structure
 
-## 🗂️ Project Structure
-
 ```
 Research_Project/
 ├── generate_ecommerce_data.py              # Script to generate synthetic e-commerce data
