@@ -15,7 +15,10 @@ df = pd.read_csv(csv_path)
 df['Age'] = df['Age'].fillna(df['Age'].mean())
 df['AnnualIncome'] = df['AnnualIncome'].fillna(df['AnnualIncome'].mean())
 df['TotalSpent'] = df['TotalSpent'].fillna(df['TotalSpent'].mean())
-df['Gender'] = df['Gender'].str.capitalize().replace(['Unknown', 'unknown', 'nan', None], 'Unknown')
+df['Gender'] = df['Gender'].str.capitalize()
+df['Gender'] = df['Gender'].replace(['Unknown', 'unknown', 'nan', 'None'], 'Unknown')
+df['Gender'] = df['Gender'].fillna('Unknown')  # handles actual None/NaN values
+
 df['Country'] = df['Country'].str.replace('.', '', regex=False).str.upper().fillna('UNKNOWN')
 
 # Create all plots first
@@ -35,7 +38,9 @@ plt.tight_layout()
 plt.savefig('country_distribution.png')
 
 plt.figure(figsize=(6,4))
-sns.histplot(df['Age'], bins=15, kde=True)
+df['Age'] = pd.to_numeric(df['Age'], errors='coerce')  # convert to numbers, invalid to NaN
+df['Age'] = df['Age'].fillna(df['Age'].mean())
+
 plt.title('Age Distribution')
 plt.tight_layout()
 plt.savefig('age_distribution.png')
