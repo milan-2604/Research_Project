@@ -87,16 +87,3 @@ Ensure Python 3.x is installed. Then install dependencies:
 
 ```bash
 pip install -r requirements.txt
-Or manually install:
-
-bash
-Copy code
-pip install pandas numpy matplotlib seaborn scikit-learn
-2. Generate Dataset
-bash
-Copy code
-python generate_ecommerce_data.py
-3. Run Analysis
-bash
-Copy code
-python analyze.py
