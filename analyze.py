@@ -1,9 +1,16 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-
+import os
 # Load data and clean it (same as before)
-df = pd.read_csv('../ecommerce_customer_data.csv')
+# Get current script's directory
+script_dir = os.path.dirname(os.path.abspath(__file__))
+
+# Construct full path to the CSV in same folder
+csv_path = os.path.join(script_dir, 'ecommerce_customer_data.csv')
+
+df = pd.read_csv(csv_path)
+
 
 df['Age'] = df['Age'].fillna(df['Age'].mean())
 df['AnnualIncome'] = df['AnnualIncome'].fillna(df['AnnualIncome'].mean())
